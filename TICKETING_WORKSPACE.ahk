@@ -8,7 +8,6 @@ MoveAndResizeWindow(appPath, windowTitle, newX, newY, newWidth, newHeight) {
     } else {
         MsgBox, Window not found: %windowTitle%.
     }
-    Sleep, 1000
 }
 
 ; Function to run a command in a new terminal window
@@ -17,17 +16,18 @@ RunCommandInTerminal(profile, directory, command) {
     MoveAndResizeWindow(terminalPath, "ahk_class CASCADIA_HOSTING_WINDOW_CLASS", 0, A_ScreenHeight - 450, 1950, 400)
     Sleep, 1000
     Send, % command "{Enter}"
-    Sleep, 1000
 }
 
 ; Examples of using the functions
 RunCommandInTerminal("Shakura", "C:\Users\josep\OneDrive\Desktop\Microservices\ticketing", "code .")
-Sleep, 1500 
+Sleep, 1500
 RunCommandInTerminal("Scarlet", "C:\Users\josep\OneDrive\Desktop\Microservices\ticketing\orders", "npm run test")
 Sleep, 1500
 RunCommandInTerminal("Jakie Brown", "C:\Users\josep\OneDrive\Desktop\Microservices", "git log --oneline")
 Sleep, 1500
 
 ; Open a Udemy course in Chrome
-MoveAndResizeWindow("chrome, "https://www.udemy.com/course/microservices-with-node-js-and-react/learn/lecture/19493798?start=150#content{Enter}", 0, 0, 1920, 1080)
+MoveAndResizeWindow("chrome.exe", "Udemy - Microservices Course", 0, 0, 1920, 1080)
+Send, "https://www.udemy.com/course/microservices-with-node-js-and-react/learn/lecture/19493798?start=150#content{Enter}"
+
 

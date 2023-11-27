@@ -45,7 +45,7 @@ targetPID := 37140  ; Replace 37140 with the actual PID                         
 WinGet, targetHwnd, ID, ahk_pid %targetPID%                                                  ; Get the unique ID (HWND) of the window using its PID
 if (targetHwnd != "")                                                                        ; Check if the window exists ; Move the window to the desired location
 {
-    WinMove, ahk_id %targetHwnd%, , 1030, 1, 900, 950                                        ; Example: Move to (500, 100)
+    WinMove, ahk_id %targetHwnd%, , 921, 0, 1003, 988                                        ; Example: Move to (500, 100)
 }
 Sleep, 1000
 
@@ -53,6 +53,5 @@ targetID := 7998718                                                             
 WinGet, targetHwnd, ID, ahk_id %targetID%                                                     ; Get the unique ID (HWND) of the window using its PID
 if (targetHwnd != "")                                                                         ; Check if the window exists
 {
-    WinMove, ahk_id %targetHwnd%, , 0, 0, 933, 900
-    git log --oneline
+    WinMove, ahk_id %targetHwnd%, , 0, 0, 958, 786
 }
